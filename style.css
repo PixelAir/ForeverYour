@@ -1,1 +1,27 @@
 
+.hidden {
+    display: none;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ffebf2;
+}
+
+h2 {
+    color: #ff0066;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background-color: #ff0066;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cc0052;
+}
