@@ -1,27 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffdde1;
+}
 
 .hidden {
     display: none;
 }
 
-body {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background-color: #ffebf2;
+#passwordScreen {
+    margin-top: 20%;
 }
 
-h2 {
-    color: #ff0066;
+.movingButton {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: move 1s infinite alternate;
 }
 
-button {
-    padding: 10px;
-    margin: 5px;
-    border: none;
-    background-color: #ff0066;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #cc0052;
+@keyframes move {
+    from { left: 50%; }
+    to { left: 60%; }
 }
