@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForeverYour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Password Screen -->
+    <div id="passwordScreen">
+        <h2>Enter Password</h2>
+        <input type="password" id="passwordInput">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <!-- First Video -->
+    <div id="videoContainer" class="hidden">
+        <video id="firstVideo" src="media/first_video.mp4" autoplay></video>
+    </div>
+
+    <!-- Question Page -->
+    <div id="questionScreen" class="hidden">
+        <h2>Do you love Isha?</h2>
+        <button onclick="askSure()">Yes</button>
+        <button onclick="askAgain()">No</button>
+    </div>
+
+    <!-- No Flow -->
+    <div id="responseScreen" class="hidden">
+        <h2 id="responseText"></h2>
+        <button id="stillNo" class="hidden" onclick="askAgainMore()">Still No</button>
+        <button id="goBack" onclick="resetToQuestion()">Go Back</button>
+        <button id="okBtn" class="hidden" onclick="finalQuestion()">Ok</button>
+    </div>
+
+    <!-- Final Confirmation -->
+    <div id="finalScreen" class="hidden">
+        <h2>Finally puchh rhi hu, do you love me naa? 🤗 baad me mood mt change kar lena 🙈</h2>
+        <button onclick="loveMessage()">Yes</button>
+        <button id="finalNo" onmouseover="moveNoButton()">No</button>
+    </div>
+
+    <!-- Love You More -->
+    <div id="loveScreen" class="hidden">
+        <h2>Love You More ❤️</h2>
+    </div>
+
+    <!-- Second Video -->
+    <div id="secondVideoContainer" class="hidden">
+        <video id="secondVideo" src="media/second_video.mp4"></video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
