@@ -1,77 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ForeverYour</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body><!-- Password Screen -->
+<div id="passwordScreen">
+    <h2>Enter Password</h2>
+    <input type="password" id="passwordInput" placeholder="Enter Password">
+    <button onclick="checkPassword()">Submit</button>
+    <p id="errorMessage"></p>
+</div>
 
-    <!-- Password Screen -->
-    <div id="passwordScreen">
-        <h2>Enter Password</h2>
-        <input type="password" id="passwordInput" placeholder="Enter Password">
-        <button onclick="checkPassword()">Submit</button>
-        <p id="errorMessage"></p>
-    </div>
+<!-- Video 1 -->
+<div id="video1Container" class="hidden">
+    <video id="video1" autoplay>
+        <source src="https://raw.githubusercontent.com/PixelAir/ForeverYour/main/media/v1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
-    <!-- Video 1 -->
-    <div id="video1Container" class="hidden">
-        <video id="video1" autoplay>
-            <source src="https://github.com/PixelAir/ForeverYour/raw/main/media/v1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+<!-- Question Screen -->
+<div id="questionContainer" class="hidden">
+    <h2>Do you love Isha?</h2>
+    <button onclick="showAreYouSure()">Yes</button>
+    <button onclick="showThinkAgain()">No</button>
+</div>
 
-    <!-- Question Screen -->
-    <div id="questionContainer" class="hidden">
-        <h2>Do you love Isha?</h2>
-        <button onclick="showAreYouSure()">Yes</button>
-        <button onclick="showThinkAgain()">No</button>
-    </div>
+<!-- Are You Sure? -->
+<div id="areYouSureContainer" class="hidden">
+    <h2>Are you sure? Think again</h2>
+    <button onclick="showFinalQuestion()">Yes, I am sure</button>
+    <button onclick="showQuestionScreen()">Go back</button>
+</div>
 
-    <!-- Are You Sure? -->
-    <div id="areYouSureContainer" class="hidden">
-        <h2>Are you sure? Think again</h2>
-        <button onclick="showFinalQuestion()">Yes, I am sure</button>
-        <button onclick="showQuestionScreen()">Go back</button>
-    </div>
+<!-- Think Again -->
+<div id="thinkAgainContainer" class="hidden">
+    <h2>Itni jaldi kya h, aaram se socho</h2>
+    <button onclick="showBhaoKha()">Still No</button>
+    <button onclick="showQuestionScreen()">Go back</button>
+</div>
 
-    <!-- Think Again -->
-    <div id="thinkAgainContainer" class="hidden">
-        <h2>Itni jaldi kya h, aaram se socho</h2>
-        <button onclick="showBhaoKha()">Still No</button>
-        <button onclick="showQuestionScreen()">Go back</button>
-    </div>
+<!-- Bhao Kha -->
+<div id="bhaoKhaContainer" class="hidden">
+    <h2>Itna kyu bhao kha rhe ho 🙃. Haa boldo na 🫠</h2>
+    <button onclick="showFinalQuestion()">Ok</button>
+    <button onclick="showThinkAgain()">Still No</button>
+</div>
 
-    <!-- Bhao Kha -->
-    <div id="bhaoKhaContainer" class="hidden">
-        <h2>Itna kyu bhao kha rhe ho 🙃. Haa boldo na 🫠</h2>
-        <button onclick="showFinalQuestion()">Ok</button>
-        <button onclick="showThinkAgain()">Still No</button>
-    </div>
+<!-- Final Question -->
+<div id="finalQuestionContainer" class="hidden">
+    <h2>Finally, puchh rhi hu, do you love me naa? Baad me mood change mat kr lena 🫣</h2>
+    <button onclick="showLoveMessage()">Yes</button>
+    <button class="movingButton">No</button>
+</div>
 
-    <!-- Final Question -->
-    <div id="finalQuestionContainer" class="hidden">
-        <h2>Finally, puchh rhi hu, do you love me naa? Baad me mood change mat kr lena 🫣</h2>
-        <button onclick="showLoveMessage()">Yes</button>
-        <button class="movingButton">No</button>
-    </div>
+<!-- Love You More Message -->
+<div id="loveMessageContainer" class="hidden">
+    <h2>Love you more ❤️</h2>
+</div>
 
-    <!-- Love You More Message -->
-    <div id="loveMessageContainer" class="hidden">
-        <h2>Love you more ❤️</h2>
-    </div>
+<!-- Video 2 -->
+<div id="video2Container" class="hidden">
+    <video id="video2" autoplay>
+        <source src="https://raw.githubusercontent.com/PixelAir/ForeverYour/main/media/v6.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
-    <!-- Video 2 -->
-    <div id="video2Container" class="hidden">
-        <video id="video2" autoplay>
-            <source src="https://github.com/PixelAir/ForeverYour/raw/main/media/v2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+<script src="script.js"></script>
 
-    <script src="script.js"></script>
 </body>
 </html>
