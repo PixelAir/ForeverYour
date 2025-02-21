@@ -1,18 +1,20 @@
-const correctPassword = "31 May";
+function checkPassword() {
+    let input = document.getElementById("passwordInput").value.trim(); // Space hata diya
+    let correctPassword = "31 May";
 
-// Password Verification function checkPassword() { let input = document.getElementById("passwordInput").value; if (input === correctPassword) { document.getElementById("passwordScreen").style.display = "none"; document.getElementById("video1Container").style.display = "block";
+    if (input === correctPassword) {
+        document.getElementById("passwordScreen").style.display = "none";
+        document.getElementById("video1Container").style.display = "block";
 
-// Play First Video
-    let video1 = document.getElementById("video1");
-    video1.play();
-    video1.onended = () => {
-        document.getElementById("video1Container").style.display = "none";
-        document.getElementById("questionContainer").style.display = "block";
-    };
-} else {
-    document.getElementById("errorMessage").innerText = "Incorrect Password!";
-}
-
+        let video1 = document.getElementById("video1");
+        video1.play();
+        video1.onended = () => {
+            document.getElementById("video1Container").style.display = "none";
+            document.getElementById("questionContainer").style.display = "block";
+        };
+    } else {
+        document.getElementById("errorMessage").innerText = "Incorrect Password!";
+    }
 }
 
 // Question Flow Logic function showAreYouSure() { document.getElementById("questionContainer").style.display = "none"; document.getElementById("areYouSureContainer").style.display = "block"; }
